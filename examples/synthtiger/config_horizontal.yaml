@@ -11,8 +11,8 @@ corpus:
   weights: [1, 0]
   args:
     # length augmentable corpus
-    - paths: [resources/corpus/mjsynth.txt, resources/corpus/synthtext.txt]
-      weights: [1, 1]
+    - paths: [resources/corpus/10000-russian-words.txt,]
+      weights: [1]
       min_length: 1
       max_length: 25
       textcase: [lower, upper, capitalize]
