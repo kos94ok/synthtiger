@@ -11,11 +11,11 @@ corpus:
   weights: [1, 0]
   args:
     # length augmentable corpus
-    - paths: [resources/corpus/10000-russian-words.txt]
+    - paths: [resources/corpus/ru_corpus.txt]
       weights: [1]
       min_length: 1
       max_length: 25
-      textcase: [lower, upper, capitalize]
+      textcase: [lower, capitalize]
       augmentation: 0.1
       augmentation_length: [1, 25]
     # char augmentable corpus
@@ -23,7 +23,7 @@ corpus:
       weights: []
       min_length: 1
       max_length: 25
-      textcase: [lower, upper, capitalize]
+      textcase: [lower, capitalize]
       augmentation: 0
       augmentation_charset: resources/charset/alphanum_special.txt
 
