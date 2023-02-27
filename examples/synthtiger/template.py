@@ -170,8 +170,8 @@ class SynthTiger(templates.Template):
 
         # for script using diacritic, ligature and RTL
         chars = utils.split_text(label, reorder=True)
-
-        text = "".join(chars)
+        text = label
+        
         font = self.font.sample({"text": text, "vertical": self.vertical})
 
         char_layers = [layers.TextLayer(char, **font) for char in chars]
@@ -194,8 +194,8 @@ class SynthTiger(templates.Template):
 
         # for script using diacritic, ligature and RTL
         chars = utils.split_text(label, reorder=True)
-
-        text = "".join(chars)
+        text = label
+        
         font = self.font.sample({"text": text, "vertical": self.vertical})
 
         char_layers = [layers.TextLayer(char, **font) for char in chars]
