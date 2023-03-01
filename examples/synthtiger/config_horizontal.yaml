@@ -8,23 +8,23 @@ midground_offset:
 foreground_mask_pad: 5
 
 corpus:
-  weights: [1, 0]
+  weights: [0.95, 0.05]
   args:
     # length augmentable corpus
-    - paths: [resources/corpus/ru_corpus.txt]
+    - paths: [resources/corpus/russian_new.txt]
       weights: [1]
       min_length: 1
       max_length: 25
       textcase: [lower, capitalize]
       augmentation: 0.1
-      augmentation_length: [1, 25]
+      augmentation_length: [1, 5]
     # char augmentable corpus
-    - paths: []
-      weights: []
+    - paths: [resources/corpus/mjsynth.txt]
+      weights: [1]
       min_length: 1
-      max_length: 25
+      max_length: 5
       textcase: [lower, capitalize]
-      augmentation: 0
+      augmentation: 1
       augmentation_charset: resources/charset/alphanum_special.txt
 
 font:
